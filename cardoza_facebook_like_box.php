@@ -30,7 +30,13 @@ function cfblb_retrieve_options($opt_val){
 }
 
 function cardoza_fb_like_options(){
-	add_theme_page("Cardoza FB Like Box Options", "Cardoza FB Like Box", "8", "fb_like_options", "cardoza_fb_like_options_page");
+	add_menu_page(
+		__('FB Like Box'), 
+		'FB Like Box', 
+		'manage_options', 
+		'slug_for_fb_like_box', 
+		'cardoza_fb_like_options_page',
+		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
 }
 
 function cardoza_fb_like_options_page(){
@@ -95,8 +101,8 @@ function cardoza_fb_like_options_page(){
 		<option value="true" <?php if($option_value['header']=="true") echo "selected='selected'";?>>Yes</option>
 		<option value="false" <?php if($option_value['header']=="false") echo "selected='selected'";?>>No</option></select></td></tr>
 		<tr><td width="150"></td><td>(Select the option to display the title)</td></tr>
+		<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="Update Options" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 		</table>
-		<br /><input type="submit" name="frm_submit" value="Update Options"/>
 		</form>
 	</div>
 <?php
