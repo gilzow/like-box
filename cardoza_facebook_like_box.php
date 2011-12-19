@@ -3,7 +3,7 @@
    Plugin Name: Cardoza Facebook Like Box
    Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
    Description: Cardoza Facebook Like Box enables you to display the facebook page likes in your website.
-   Version: 1.0
+   Version: 1.1
    Author: Vinoj Cardoza
    Author URI: http://fingerfish.com/about-me/
    License: GPL2
@@ -11,6 +11,7 @@
 
 add_action("plugins_loaded", "cardoza_fb_like_init");
 add_action("admin_menu", "cardoza_fb_like_options");
+add_shortcode("cardoza_facebook_like_box", "cardoza_facebook_like_box_sc");
 
 //The following function will retrieve all the avaialable 
 //options from the wordpress database
@@ -135,6 +136,26 @@ function widget_cardoza_fb_like($args){
 <?php
 	global $wpdb;
 	echo $after_widget;
+}
+function cardoza_facebook_like_box_sc($atts){
+    $option_value = cfblb_retrieve_options($opt_val);
+    $option_value['fb_url'] = str_replace(":", "%3A", $option_value['fb_url']);
+    $option_value['fb_url'] = str_replace("/", "%2F", $option_value['fb_url']);
+    ?>
+    <iframe 
+    src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url'];?>&amp;
+    width=<?php echo $option_value['width'];?> &amp;
+    height=<?php echo $option_value['height'];?>&amp;
+    colorscheme=<?php echo $option_value['color_scheme'];?>&amp;
+    show_faces=<?php echo $option_value['show_faces'];?>&amp;
+    stream=<?php echo $option_value['stream'];?>&amp;
+    header=<?php echo $option_value['header'];?>"&amp;
+    border_color=%23FFF&amp;
+    scrolling="no" 
+    frameborder="0" 
+    style="border:none; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
+    </iframe>
+<?php
 }
 
 function cardoza_fb_like_init(){

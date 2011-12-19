@@ -2,7 +2,7 @@
 Contributors: Vinoj Cardoza
 Tags: facebook, like, likebox, fb, Facebook Like, Facebook Like Box
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.3
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -16,6 +16,9 @@ Cardoza Facebook Like Box is a social plugin that enables Facebook Page owners t
 3. Like the Page with one click, without needing to visit the Page
 
 Note: Best plugin output width is 292px.
+
+<New Feature>>>
+Short code added so that you can show the facebook like boxes in the pages or posts.
 
 If you have any suggestions or feedback, please post it in the following link.
 
@@ -41,5 +44,9 @@ Uninstalling is as simple as deactivating the plugin.
 
 == Frequently Asked Questions ==
 
-None yet, if you have one post it at http://fingerfish.com/cardoza-facebook-like-box/
+How do I display the facebook like box in the pages or posts?
+1. Just conp and paste the code below on the page or post you want to display the facebook like box
+[cardoza_facebook_like_box]
+
+if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
