@@ -45,7 +45,9 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 How do I display the facebook like box in the pages or posts?
-1. Just conp and paste the code below on the page or post you want to display the facebook like box
+
+1. Just copy and paste the code below on the page or post you want to display the facebook like box
+
 [cardoza_facebook_like_box]
 
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
