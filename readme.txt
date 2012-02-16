@@ -20,12 +20,6 @@ Note: Best plugin output width is 292px.
 <New Feature>>>
 Short code added so that you can show the facebook like boxes in the pages or posts.
 
-Donations
-
-Hello guys,I spent most of my free time creating, updating, maintaining and supporting these plugins, 
-if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. To donate visit
-my site http://fingerfish.com. If not feel free to use it without any obligations.
-
 If you have any suggestions or feedback, please post it in the following link.
 
 For more visit: http://fingerfish.com/cardoza-facebook-like-box/
@@ -51,10 +45,13 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 How do I display the facebook like box in the pages or posts?
-
-1. Just copy and paste the code below on the page or post you want to display the facebook like box
-
+1. Just conp and paste the code below on the page or post you want to display the facebook like box
 [cardoza_facebook_like_box]
 
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
+
+== Change Log ==
+
+Version 1.2 (Date updated: 16 February 2012)
+Shortcode updated to display on the specific place according to the post or page.
 
