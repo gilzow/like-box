@@ -14,11 +14,15 @@ Cardoza Facebook Like Box is a social plugin that enables Facebook Page owners t
 1. See how many users already like this Page, and which of their friends like it too
 2. Read recent posts from the Page
 3. Like the Page with one click, without needing to visit the Page
+4. Add a shortcode to display the facebook like box on any page or post.
 
 Note: Best plugin output width is 292px.
 
-<New Feature>>>
-Short code added so that you can show the facebook like boxes in the pages or posts.
+= Donations =
+
+Hello guys,I spent most of my free time creating, updating, maintaining and supporting these plugins, 
+if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. To donate visit
+my site http://fingerfish.com. If not feel free to use it without any obligations.
 
 If you have any suggestions or feedback, please post it in the following link.
 
