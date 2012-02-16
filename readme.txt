@@ -52,6 +52,6 @@ if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-b
 
 == Change Log ==
 
-Version 1.2 (Date updated: 16 February 2012)
+= Version 1.2 (Date updated: 16 February 2012) =
 Shortcode updated to display on the specific place according to the post or page.
 
