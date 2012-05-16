@@ -1,6 +1,6 @@
 === Cardoza Facebook Like Box ===
 Contributors: Vinoj Cardoza
-Tags: facebook, like, likebox, fb, Facebook Like, Facebook Like Box
+Tags: facebook, like, likebox, FB, Facebook Like, Facebook Like Box
 Requires at least: 3.0
 Tested up to: 3.3
 Stable tag: trunk
