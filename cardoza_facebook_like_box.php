@@ -1,13 +1,13 @@
 <?php
-   /*
-   Plugin Name: Cardoza Facebook Like Box
-   Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
-   Description: Cardoza Facebook Like Box enables you to display the facebook page likes in your website.
-   Version: 1.2
-   Author: Vinoj Cardoza
-   Author URI: http://fingerfish.com/about-me/
-   License: GPL2
-   */
+/*
+Plugin Name: Cardoza Facebook Like Box
+Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
+Description: Cardoza Facebook Like Box enables you to display the facebook page likes in your website.
+Version: 1.3
+Author: Vinoj Cardoza
+Author URI: http://fingerfish.com/about-me/
+License: GPL2
+*/
 
 add_action("plugins_loaded", "cardoza_fb_like_init");
 add_action("admin_menu", "cardoza_fb_like_options");
@@ -20,6 +20,8 @@ function cfblb_retrieve_options($opt_val){
 	$opt_val = array(
 			'title' => stripslashes(get_option('cfblb_title')),
 			'fb_url' => stripslashes(get_option('cfblb_fb_url')),
+			'fb_border_color' => stripslashes(get_option('cfblb_fb_border_color')),
+			'fb_color' => stripslashes(get_option('cfblb_fb_border_color')),
 			'width' => stripslashes(get_option('cfblb_width')),
 			'height' => stripslashes(get_option('cfblb_height')),
 			'color_scheme' => stripslashes(get_option('cfblb_color_scheme')),
@@ -37,13 +39,14 @@ function cardoza_fb_like_options(){
 		'manage_options', 
 		'slug_for_fb_like_box', 
 		'cardoza_fb_like_options_page',
-		plugin_dir_url(__FILE__).'images/Vinoj.jpg');
+		plugin_dir_url(__FILE__).'images/fb.png');
 }
 
 function cardoza_fb_like_options_page(){
 	$cfblb_options = array(
 			'cfb_title' => 'cfblb_title',
 			'cfb_fb_url' => 'cfblb_fb_url',
+			'cfb_fb_border_color' => 'cfblb_fb_border_color',
 			'cfb_width' => 'cfblb_width',
 			'cfb_height' => 'cfblb_height',
 			'cfb_color_scheme' => 'cfblb_color_scheme',
@@ -55,6 +58,7 @@ function cardoza_fb_like_options_page(){
 	if(isset($_POST['frm_submit'])){
 		if(!empty($_POST['frm_title'])) update_option($cfblb_options['cfb_title'], $_POST['frm_title']);
 		if(!empty($_POST['frm_url'])) update_option($cfblb_options['cfb_fb_url'], $_POST['frm_url']);
+		if(!empty($_POST['frm_border_color'])) update_option($cfblb_options['cfb_fb_border_color'], $_POST['frm_border_color']);
 		if(!empty($_POST['frm_width'])) update_option($cfblb_options['cfb_width'], $_POST['frm_width']);
 		if(!empty($_POST['frm_height'])) update_option($cfblb_options['cfb_height'], $_POST['frm_height']);
 		if(!empty($_POST['frm_color_scheme'])) update_option($cfblb_options['cfb_color_scheme'], $_POST['frm_color_scheme']);
@@ -77,6 +81,8 @@ function cardoza_fb_like_options_page(){
         <tr><td width="150"></td><td>(Title of the facebook like box)</td></tr>
         <tr><td width="150"><b>Facebook Page URL:</b></td><td><input type="text" name="frm_url" size="50" value="<?php echo $option_value['fb_url'];?>"/></td></tr>
         <tr><td width="150"></td><td>(Copy and paste your facebook page url here)</td></tr>
+		<tr><td width="150"><b>Border Color:</b></td><td>#<input type="text" name="frm_border_color" value="<?php echo $option_value['fb_border_color'];?>"/></td></tr>
+		<tr><td width="150"></td><td>(Border Color of the facebook like box)</td></tr>
 		<tr><td width="150"><b>Width:</b></td><td><input type="text" name="frm_width" value="<?php echo $option_value['width'];?>"/>px</td></tr>
 		<tr><td width="150"></td><td>(Width of the facebook like box)</td></tr>
 		<tr><td width="150"><b>Height:</b></td>
@@ -127,8 +133,8 @@ function widget_cardoza_fb_like($args){
 	colorscheme=<?php echo $option_value['color_scheme'];?>&amp;
 	show_faces=<?php echo $option_value['show_faces'];?>&amp;
 	stream=<?php echo $option_value['stream'];?>&amp;
-	header=<?php echo $option_value['header'];?>"&amp;
-	border_color=%23FFF&amp;
+	header=<?php echo $option_value['header'];?>&amp;
+	border_color=%23<?php echo $option_value['fb_border_color'];?>"
 	scrolling="no" 
 	frameborder="0" 
 	style="border:none; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
@@ -150,8 +156,8 @@ function cardoza_facebook_like_box_sc($atts){
     colorscheme=<?php echo $option_value['color_scheme'];?>&amp;
     show_faces=<?php echo $option_value['show_faces'];?>&amp;
     stream=<?php echo $option_value['stream'];?>&amp;
-    header=<?php echo $option_value['header'];?>"&amp;
-    border_color=%23FFF&amp;
+    header=<?php echo $option_value['header'];?>&amp;
+    border_color=%23<?php echo $option_value['fb_border_color'];?>"
     scrolling="no" 
     frameborder="0" 
     style="border:none; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
@@ -165,6 +171,4 @@ function cardoza_facebook_like_box_sc($atts){
 function cardoza_fb_like_init(){
 	register_sidebar_widget(__('Cardoza\'s Facebook Like Box'), 'widget_cardoza_fb_like');
 }
-
-
 ?>

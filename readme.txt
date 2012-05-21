@@ -1,8 +1,8 @@
 === Cardoza Facebook Like Box ===
 Contributors: Vinoj Cardoza
-Tags: facebook, like, likebox, FB, Facebook Like, Facebook Like Box
+Tags: facebook, like, likebox, fb, Facebook Like, Facebook Like Box
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.3.2
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -55,6 +55,9 @@ How do I display the facebook like box in the pages or posts?
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 1.3 (Date updated: 21 May 2012) =
+Border color input enabled for the facebook like box. Now the users can specify the border color of the like box.
 
 = Version 1.2 (Date updated: 16 February 2012) =
 Shortcode updated to display on the specific place according to the post or page.
