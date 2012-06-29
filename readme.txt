@@ -1,5 +1,6 @@
 === Cardoza Facebook Like Box ===
-Contributors: Vinoj Cardoza
+Contributors: vinoj.cardoza
+Donate link: http://www.fingerfish.com/
 Tags: facebook, like, likebox, fb, Facebook Like, Facebook Like Box
 Requires at least: 3.0
 Tested up to: 3.3.2
