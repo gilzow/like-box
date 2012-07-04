@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Cardoza Facebook Like Box
+Plugin Name: Facebook Like Box
 Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
 Description: Cardoza Facebook Like Box enables you to display the facebook page likes in your website.
 Version: 1.3
@@ -72,7 +72,7 @@ function cardoza_fb_like_options_page(){
 	$option_value = cfblb_retrieve_options($opt_val);
 ?>
 	<div class="wrap">
-		<h2><?php _e("Cardoza FB Like Box Options", "cfblb_tans_domain");?></h2><br />
+		<h2><?php _e("Facebook Like Box Options", "cfblb_tans_domain");?></h2><br />
 		<!-- Administration panel form -->
 		<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 		<h3>General Settings</h3>
@@ -169,6 +169,6 @@ function cardoza_facebook_like_box_sc($atts){
 }
 
 function cardoza_fb_like_init(){
-	register_sidebar_widget(__('Cardoza\'s Facebook Like Box'), 'widget_cardoza_fb_like');
+	register_sidebar_widget(__('Facebook Like Box'), 'widget_cardoza_fb_like');
 }
 ?>
