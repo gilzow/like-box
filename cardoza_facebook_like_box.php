@@ -3,7 +3,7 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
 Description: Cardoza Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 1.3
+Version: 1.4
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
