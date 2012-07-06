@@ -1,7 +1,7 @@
 === Facebook Like Box ===
 Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
-Tags: facebook, like, likebox, fb, Facebook Like, Facebook Like Box
+Tags: facebook, like, likebox, fb, facebook like, facebook like box, fb like box
 Requires at least: 3.0
 Tested up to: 3.3.2
 Stable tag: trunk
