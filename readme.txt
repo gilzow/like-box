@@ -12,6 +12,7 @@ Facebook Like Box enables you to display the facebook page likes in your website
 == Description ==
 
 Facebook Like Box is a social plugin that enables Facebook Page owners to attract and gain Likes from their own website. The Like Box enables users to:
+
 1. See how many users already like this Page, and which of their friends like it too
 2. Read recent posts from the Page
 3. Like the Page with one click, without needing to visit the Page
