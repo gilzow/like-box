@@ -57,6 +57,10 @@ if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-b
 
 == Change Log ==
 
+= Version 1.4 (Date updated: 06 June 2012) =
+Cardoza Facebook Like Box replaced as Facebook Like Box.
+Note:If you don’t see the widget after updating to 1.4, please check you widget in the admin section whether it is enabled.
+
 = Version 1.3 (Date updated: 21 May 2012) =
 Border color input enabled for the facebook like box. Now the users can specify the border color of the like box.
 
