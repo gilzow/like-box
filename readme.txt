@@ -1,13 +1,13 @@
 === Facebook Like Box ===
 Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
-Tags: facebook, like, likebox, fb, facebook like, facebook like box, fb like box
+Tags: facebook, like, likebox, fb, facebook like, like button, facebook like box, fb like box, button
 Requires at least: 3.0
 Tested up to: 3.3.2
 Stable tag: trunk
 License: GPLv2 or later
 
-Facebook Like Box enables you to display the facebook page likes in your website.
+Facebook Like Box enables you to display the facebook page likes in your website. Display like button for the posts.
 
 == Description ==
 
@@ -15,8 +15,9 @@ Facebook Like Box is a social plugin that enables Facebook Page owners to attrac
 
 1. See how many users already like this Page, and which of their friends like it too
 2. Read recent posts from the Page
-3. Like the Page with one click, without needing to visit the Page
-4. Add a shortcode to display the facebook like box on any page or post.
+3. Like the Page with one click, without needing to visit the Page.
+4. Add like button for the posts.
+5. Add a shortcode to display the facebook like box on any page or post.
 
 Note: Best plugin output width is 292px.
 
@@ -35,9 +36,9 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 1. Download the plugin.
 2. Upload to your blog (/wp-content/plugins/).
 3. Activate it.
-4. Click the Appearance menu and click the Cardoza FB Like Box.
+4. Click the Appearance menu and click the FB Like Box.
 5. Fill in the options.
-6. Then go to widget and drag and drop Cardoza's Facebook Like Box in the area you want to display the plugin.
+6. Then go to widget and drag and drop Facebook Like Box in the area you want to display the plugin.
 
 You're done!
 
@@ -58,7 +59,10 @@ if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-b
 
 == Change Log ==
 
-= Version 1.4 (Date updated: 06 June 2012) =
+= Version 1.5 (Date updated: 10 July 2012) =
+Like box for posts added to the plugin.
+
+= Version 1.4 (Date updated: 06 July 2012) =
 Cardoza Facebook Like Box replaced as Facebook Like Box.
 
 Note:If you don't see the widget after updating to 1.4, please check you widget in the admin section whether it is enabled.
