@@ -18,6 +18,7 @@ Facebook Like Box is a social plugin that enables Facebook Page owners to attrac
 3. Like the Page with one click, without needing to visit the Page.
 4. Add like button for the posts.
 5. Add a shortcode to display the facebook like box on any page or post.
+6. Translation enabled by using I18n.
 
 Note: Best plugin output width is 292px.
 
@@ -28,6 +29,9 @@ if you really love my plugins and could spare me a couple of bucks, I will reall
 my site http://fingerfish.com. If not feel free to use it without any obligations.
 
 If you have any suggestions or feedback, please post it in the following link.
+
+= Translation =
+Translation is enabled for this plugin. If some interested in translating this plugin please visit the following link.
 
 For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 
@@ -48,7 +52,6 @@ Uninstalling is as simple as deactivating the plugin.
 
 1. screenshot-1.gif
 2. screenshot-2.gif
-2. screenshot-3.png
 
 == Frequently Asked Questions ==
 
@@ -59,6 +62,9 @@ How do I display the facebook like box in the pages or posts?
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 1.6 (Date updated: 17 July 2012) =
+Translation enabled for this plugin.
 
 = Version 1.5 (Date updated: 10 July 2012) =
 Like box for posts added to the plugin.
