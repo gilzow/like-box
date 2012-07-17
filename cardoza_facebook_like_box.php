@@ -3,7 +3,7 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 1.5
+Version: 1.6
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -36,15 +36,15 @@ function cardoza_fb_like_options(){
 	
 	add_menu_page(
 		__('FB Like Box'), 
-		'FB Like Box', 
+		__('FB Like Box'), 
 		'manage_options', 
 		'slug_for_fb_like_box', 
 		'cardoza_fb_like_options_page',
 		plugin_dir_url(__FILE__).'images/fb.png');    
     add_submenu_page(
             'slug_for_fb_like_box',
-            'Posts Like Box',
-            'Posts Like Box',
+            __('Posts Like Box'),
+            __('Posts Like Box'),
             'manage_options',
             'posts_like_options',
 			'posts_like_options');
@@ -80,72 +80,77 @@ function cardoza_fb_like_options_page(){
 	$option_value = cfblb_retrieve_options($opt_val);
 ?>
 	<div class="wrap">
-		<h2><?php _e("Facebook Like Box Options", "cfblb_tans_domain");?></h2><br />
+		<h2><?php echo __("Facebook Like Box Options", "cflbdomain");?></h2><br />
 		<!-- Administration panel form -->
 		<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 		<table>
-			<tr><td><h3>General Settings</h3></td><td></td></tr>
+			<tr><td><h3><?php _e('General Settings', 'cflbdomain');?></h3></td><td></td></tr>
 			<tr height="35">
-				<td width="150"><b>Title:</b></td>
-				<td><input type="text" name="frm_title" size="50" value="<?php echo $option_value['title'];?>"/>&nbsp;(Title of the facebook like box)</td>
+				<td width="150"><b><?php _e('Title:', 'cflbdomain');?></b></td>
+				<td><input type="text" name="frm_title" size="50" value="<?php echo $option_value['title'];?>"/>
+						&nbsp;(<?php _e('Title of the facebook like box', 'facebooklikebox');?>)</td>
 			</tr>
         	<tr height="35">
-				<td width="150"><b>Facebook Page URL:</b></td>
-				<td><input type="text" name="frm_url" size="50" value="<?php echo $option_value['fb_url'];?>"/>&nbsp;(Copy and paste your facebook page url here)</td>
+				<td width="150"><b><?php _e('Facebook Page URL:', 'cflbdomain');?></b></td>
+				<td><input type="text" name="frm_url" size="50" value="<?php echo $option_value['fb_url'];?>"/>
+						&nbsp;(<?php _e('Copy and paste your facebook page url here', 'facebooklikebox');?>)</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Border Color:</b></td>
-				<td>#<input type="text" name="frm_border_color" value="<?php echo $option_value['fb_border_color'];?>"/>&nbsp;(Border Color of the facebook like box)</td>
+				<td width="150"><b><?php _e("Border Color:", 'cflbdomain');?></b></td>
+				<td>#<input type="text" name="frm_border_color" value="<?php echo $option_value['fb_border_color'];?>"/>
+						&nbsp;(<?php _e('Border Color of the facebook like box', 'cfblb_tans_domain');?>)</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Width:</b></td>
-				<td><input type="text" name="frm_width" value="<?php echo $option_value['width'];?>"/>px &nbsp;(Width of the facebook like box)</td>
+				<td width="150"><b><?php _e('Width:', 'cflbdomain');?></b></td>
+				<td><input type="text" name="frm_width" value="<?php echo $option_value['width'];?>"/>px 
+						&nbsp;(<?php _e('Width of the facebook like box', 'cfblb_tans_domain');?>)</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Height:</b></td>
-		        <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px &nbsp;(Height of the facebook like box)</td>
+				<td width="150"><b><?php _e('Height:', 'cflbdomain');?></b></td>
+		        <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px 
+		        		&nbsp;(<?php _e('Height of the facebook like box', 'cfblb_tans_domain');?>)</td>
 			</tr>
     	    <tr height="35">
-				<td width="150"><b>Color Scheme:</b></td>
+				<td width="150"><b><?php _e('Color Scheme:', 'cflbdomain');?></b></td>
 				<td>
 					<select name="frm_color_scheme" style="margin-left:0px;width:100px;">
 						<option value="light" <?php if($option_value['color_scheme']=="light") echo "selected='selected'";?>>light</option>
 						<option value="dark" <?php if($option_value['color_scheme']=="dark") echo "selected='selected'";?>>dark</option>
 					</select>
-					&nbsp;(Select the color scheme you want to display)
+					&nbsp;(<?php _e('Select the color scheme you want to display', 'cflbdomain');?>)
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Show Faces:</b></td>
+				<td width="150"><b><?php _e('Show Faces:', 'cflbdomain');?></b></td>
 				<td>
 					<select name="frm_show_faces" style="margin-left:0px;width:100px;">
 						<option value="true" <?php if($option_value['show_faces']=="true") echo "selected='selected'";?>>Yes</option>
 						<option value="false" <?php if($option_value['show_faces']=="false") echo "selected='selected'";?>>No</option>
 					</select>
-					&nbsp;(Select the option to show the faces)
+					&nbsp;(<?php _e('Select the option to show the faces', 'cflbdomain');?>)
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Stream:</b></td>
+				<td width="150"><b><?php _e('Stream:', 'cfblb_tans_domain');?></b></td>
 				<td>
 					<select name="frm_stream" style="margin-left:0px;width:100px;">
 						<option value="true" <?php if($option_value['stream']=="true") echo "selected='selected'";?>>Yes</option>
 						<option value="false" <?php if($option_value['stream']=="false") echo "selected='selected'";?>>No</option>
 					</select>
-					&nbsp;(Select the option to display the stream)
+					&nbsp;(<?php _e('Select the option to display the stream', 'cfblb_tans_domain');?>)
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="168"><b>Header</b></td>
+				<td width="168"><b><?php _e('Header', 'cfblb_tans_domain');?></b></td>
 				<td>
 					<select name="frm_header" style="margin-left:0px;width:100px;">
 						<option value="true" <?php if($option_value['header']=="true") echo "selected='selected'";?>>Yes</option>
 						<option value="false" <?php if($option_value['header']=="false") echo "selected='selected'";?>>No</option>
 					</select>
-					&nbsp;(Select the option to display the title)
+					&nbsp;(<?php _e('Select the option to display the title', 'cfblb_tans_domain');?>)
 				</td>
 			</tr>
-			<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="Update Options" style="background-color:#CCCCCC;font-weight:bold;"/></td>
+			<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="<?php _e('Save');?>" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 			</tr>
 		</table>
 		</form>
@@ -233,12 +238,12 @@ function posts_like_options(){
 	}
 ?>
 	<div class="wrap">
-		<h2><?php _e("Facebook Posts Like Options", "cfblb_tans_domain");?></h2><br />
+		<h2><?php _e("Facebook Posts Like Options", "cardoza_facebook_like_box");?></h2><br />
 		<!-- Administration panel form -->
 		<form method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 		<table>
 			<tr height="35">
-				<td width="170"><b>Show like button for posts:</b></td>
+				<td width="170"><b><?php _e('Show like button for posts', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="cfpl_enable" style="margin-left:0px;width:100px;">
 						<option value="yes" <?php if($cfpl_enable == "yes") echo "selected='selected'";?>>Yes</option>
@@ -247,7 +252,7 @@ function posts_like_options(){
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Show like button:</b></td>
+				<td width="150"><b><?php _e('Show like button', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="show_button" style="margin-left:0px;width:225px;">
 						<option value="before_post_content" <?php if($show_button == "before_post_content") echo "selected='selected'";?>>Before the post content</option>
@@ -257,7 +262,7 @@ function posts_like_options(){
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Layout:</b></td>
+				<td width="150"><b><?php _e('Layout', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="layout" style="margin-left:0px;width:100px;">
 						<option value="standard" <?php if($layout == "standard") echo "selected='selected'";?>>standard</option>
@@ -267,17 +272,17 @@ function posts_like_options(){
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Show Faces:</b></td>
+				<td width="150"><b><?php _e('Show Faces', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="show_faces" style="margin-left:0px;width:100px;">
 						<option value="true" <?php if($show_faces=="true") echo "selected='selected'";?>>Yes</option>
 						<option value="false" <?php if($show_faces=="false") echo "selected='selected'";?>>No</option>
 					</select>
-					&nbsp;(Select the option to show the faces)
+					&nbsp;(<?php _e('Select the option to show the faces', 'cflbdomain');?>)
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Verb to display:</b></td>
+				<td width="150"><b><?php _e('Verb to display', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="verb" style="margin-left:0px;width:100px;">
 						<option value="like" <?php if($verb == "like") echo "selected='selected'";?>>like</option>
@@ -286,16 +291,16 @@ function posts_like_options(){
 				</td>
 			</tr>
 			<tr height="35">
-				<td width="150"><b>Color Scheme:</b></td>
+				<td width="150"><b><?php _e('Color Scheme', 'cflbdomain');?>:</b></td>
 				<td>
 					<select name="color_scheme" style="margin-left:0px;width:100px;">
 						<option value="light" <?php if($color_scheme=="light") echo "selected='selected'";?>>light</option>
 						<option value="dark" <?php if($color_scheme=="dark") echo "selected='selected'";?>>dark</option>
 					</select>
-					&nbsp;(Select the color scheme you want to display)
+					&nbsp;(<?php _e('Select the color scheme you want to display', 'cflbdomain');?>)
 				</td>
 			</tr>
-			<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="Update Options" style="background-color:#CCCCCC;font-weight:bold;"/></td>
+			<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="<?php _e('Save');?>" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 			</tr>
 		</table>
 		</form>
@@ -341,6 +346,7 @@ add_filter('the_content', 'fb_like_button_for_post');
 
 
 function cardoza_fb_like_init(){
+	load_plugin_textdomain('cflbdomain', false, dirname( plugin_basename(__FILE__)));
 	register_sidebar_widget(__('Facebook Like Box'), 'widget_cardoza_fb_like');
 }
 ?>
