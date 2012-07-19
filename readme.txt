@@ -52,6 +52,7 @@ Uninstalling is as simple as deactivating the plugin.
 
 1. screenshot-1.gif
 2. screenshot-2.gif
+3. screenshot-3.gif
 
 == Frequently Asked Questions ==
 
