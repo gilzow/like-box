@@ -24,9 +24,7 @@ Note: Best plugin output width is 292px.
 
 = Donations =
 
-Hello guys,I spent most of my free time creating, updating, maintaining and supporting these plugins, 
-if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. To donate visit
-my site http://fingerfish.com. If not feel free to use it without any obligations.
+Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating. To donate visit my site http://www.fingerfish.com.
 
 If you have any suggestions or feedback, please post it in the following link.
 
