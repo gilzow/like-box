@@ -36,7 +36,7 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 = Translated languages =
 Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-facebook-like-box/i18n
 
-* French
+* French (Translated by Laurent Verpeet)
 
 == Installation ==
 
