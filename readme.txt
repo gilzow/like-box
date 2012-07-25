@@ -34,7 +34,6 @@ Translation is enabled for this plugin. If someone interested in translating thi
 For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 
 = Translated languages =
-Link for translation - http://plugins.trac.wordpress.org/browser/cardoza-facebook-like-box/i18n
 
 * French (Translated by Laurent Verpeet)
 * German
