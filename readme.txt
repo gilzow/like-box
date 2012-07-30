@@ -36,7 +36,7 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 = Translated languages =
 
 * French (Translated by Laurent Verpeet)
-* German
+* German (Translated by Peter Kaulfuss)
 * Spanish
 
 == Installation ==
@@ -67,6 +67,11 @@ How do I display the facebook like box in the pages or posts?
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+= Version 1.8 =
+Translation for German updated.
+
+= Version 1.7 =
+Translation for French updated.
 
 = Version 1.6 (Date updated: 17 July 2012) =
 Translation enabled for this plugin.
