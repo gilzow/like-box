@@ -3,7 +3,7 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 1.8
+Version: 1.9
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
@@ -12,6 +12,7 @@ License: GPL2
 add_action("plugins_loaded", "cardoza_fb_like_init");
 add_action("admin_menu", "cardoza_fb_like_options");
 add_shortcode("cardoza_facebook_like_box", "cardoza_facebook_like_box_sc");
+add_shortcode("cardoza_facebook_posts_like", "cardoza_facebook_posts_like_sc");
 
 //The following function will retrieve all the avaialable 
 //options from the wordpress database
@@ -344,6 +345,22 @@ function fb_like_button_for_post($content) {
 }
 add_filter('the_content', 'fb_like_button_for_post');
 
+function cardoza_facebook_posts_like_sc($content){
+    $cfpl_enable = get_option('cfpl_enable');
+	$show_button = get_option('cfpl_show_button');
+	$layout = get_option('cfpl_layout');
+	$show_faces = get_option('cfpl_show_faces');
+	$verb = get_option('cfpl_verb');
+	$color_scheme = get_option('cfpl_color_scheme');
+	
+	if (is_single()) { 
+		$content = '<iframe src="http://www.facebook.com/plugins/like.php?href='
+				.urlencode(get_permalink($post->ID)).
+				'&amp;layout='.$layout.'&amp;show_faces='.$show_faces.'&amp;width=450&amp;action='.$verb.'&amp;colorscheme='.$color_scheme.'" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px;"></iframe>'
+				.$content;
+	}
+	return $content;
+}
 
 function cardoza_fb_like_init(){
 	load_plugin_textdomain('facebooklikebox', false, dirname( plugin_basename(__FILE__)).'/languages');

@@ -18,7 +18,8 @@ Facebook Like Box is a social plugin that enables Facebook Page owners to attrac
 3. Like the Page with one click, without needing to visit the Page.
 4. Add like button for the posts.
 5. Add a shortcode to display the facebook like box on any page or post.
-6. Translation enabled by using I18n.
+6. Add a shortcode to display the facebook posts like on any page or post.
+7. Translation enabled by using I18n.
 
 Note: Best plugin output width is 292px.
 
@@ -35,8 +36,10 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 
 = Translated languages =
 
+* Danish (Translated by Simon Bøgh)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
+* Hungarian (Translated by Varanka Zoltán)
 * Spanish
 
 == Installation ==
@@ -61,32 +64,40 @@ Uninstalling is as simple as deactivating the plugin.
 == Frequently Asked Questions ==
 
 How do I display the facebook like box in the pages or posts?
-1. Just conp and paste the code below on the page or post you want to display the facebook like box
+Just copy and paste the code below on the page or post you want to display the facebook like box.
 [cardoza_facebook_like_box]
+
+How do I display the facebook posts like in the pages or posts?
+Just copy and paste the code below on the page or post you want to display the facebook posts like button.
+[cardoza_facebook_posts_like]
 
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 1.9 =
+* Post like box shortcode added.
+* Hungarian translation included.
+* Danish translation included.
+
 = Version 1.8 =
 Translation for German updated.
 
 = Version 1.7 =
 Translation for French updated.
 
-= Version 1.6 (Date updated: 17 July 2012) =
+= Version 1.6 =
 Translation enabled for this plugin.
 
-= Version 1.5 (Date updated: 10 July 2012) =
+= Version 1.5 =
 Like box for posts added to the plugin.
 
-= Version 1.4 (Date updated: 06 July 2012) =
+= Version 1.4 =
 Cardoza Facebook Like Box replaced as Facebook Like Box.
 
-Note:If you don't see the widget after updating to 1.4, please check you widget in the admin section whether it is enabled.
-
-= Version 1.3 (Date updated: 21 May 2012) =
+= Version 1.3 =
 Border color input enabled for the facebook like box. Now the users can specify the border color of the like box.
 
-= Version 1.2 (Date updated: 16 February 2012) =
+= Version 1.2 =
 Shortcode updated to display on the specific place according to the post or page.
 
