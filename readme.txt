@@ -36,10 +36,10 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 
 = Translated languages =
 
-* Danish (Translated by Simon Bøgh)
+* Danish (Translated by Simon Bogh)
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
-* Hungarian (Translated by Varanka Zoltán)
+* Hungarian (Translated by Varanka Zoltan)
 * Spanish
 
 == Installation ==
@@ -74,6 +74,9 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 2.0 =
+* Hungarian translation updated.
 
 = Version 1.9 =
 * Post like box shortcode added.
