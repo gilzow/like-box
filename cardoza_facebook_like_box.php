@@ -3,11 +3,14 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://fingerfish.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 2.0
+Version: 2.1
 Author: Vinoj Cardoza
 Author URI: http://fingerfish.com/about-me/
 License: GPL2
 */
+
+wp_enqueue_style('cfblbcss', plugin_dir_url(__FILE__).'/cardozafacebook.css');
+wp_enqueue_script('cfblbjs', plugin_dir_url(__FILE__).'/cardozafacebook.js', array('jquery'));
 
 add_action("plugins_loaded", "cardoza_fb_like_init");
 add_action("admin_menu", "cardoza_fb_like_options");
@@ -89,38 +92,43 @@ function cardoza_fb_like_options_page(){
 			<tr height="35">
 				<td width="150"><b><?php _e('Title', 'facebooklikebox');?>:</b></td>
 				<td><input type="text" name="frm_title" size="50" value="<?php echo $option_value['title'];?>"/>
-						&nbsp;(<?php _e('Title of the facebook like box', 'facebooklikebox');?>)</td>
+						&nbsp;<label id="cfbtitle"><b>?</b></label></td>
 			</tr>
+                        <tr id="title_help"><td></td><td>(<?php _e('Title of the facebook like box', 'facebooklikebox');?>)</td></tr>
         	<tr height="35">
 				<td width="150"><b><?php _e('Facebook Page URL:', 'facebooklikebox');?></b></td>
 				<td><input type="text" name="frm_url" size="50" value="<?php echo $option_value['fb_url'];?>"/>
-						&nbsp;(<?php _e('Copy and paste your facebook page URL here', 'facebooklikebox');?>)</td>
+						&nbsp;<label id="cfbpage_url"><b>?</b></label></td>
 			</tr>
+                        <tr id="page_url_help"><td></td><td>(<?php _e('Copy and paste your facebook page URL here', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="150"><b><?php _e("Border Color", 'facebooklikebox');?>:</b></td>
 				<td>#<input type="text" name="frm_border_color" value="<?php echo $option_value['fb_border_color'];?>"/>
-						&nbsp;(<?php _e('Border Color of the facebook like box', 'facebooklikebox');?>)</td>
+						&nbsp;<label id="cfbborder"><b>?</b></label></td>
 			</tr>
+                        <tr id="border_help"><td></td><td>(<?php _e('Border Color of the facebook like box', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="150"><b><?php _e('Width', 'facebooklikebox');?>:</b></td>
 				<td><input type="text" name="frm_width" value="<?php echo $option_value['width'];?>"/>px 
-						&nbsp;(<?php _e('Width of the facebook like box', 'facebooklikebox');?>)</td>
+						&nbsp;<label id="cfbwidth"><b>?</b></label></td>
 			</tr>
+                        <tr id="width_help"><td></td><td>(<?php _e('Width of the facebook like box', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="150"><b><?php _e('Height', 'facebooklikebox');?>:</b></td>
-		        <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px 
-		        		&nbsp;(<?php _e('Height of the facebook like box', 'facebooklikebox');?>)</td>
+                                <td><input type="text" name="frm_height" value="<?php echo $option_value['height'];?>"/>px 
+		        		&nbsp;<label id="cfbheight"><b>?</b></label></td>
 			</tr>
-    	    <tr height="35">
+                        <tr id="height_help"><td></td><td>(<?php _e('Height of the facebook like box', 'facebooklikebox');?>)</td></tr>
+                        <tr height="35">
 				<td width="150"><b><?php _e('Color Scheme', 'facebooklikebox');?>:</b></td>
 				<td>
 					<select name="frm_color_scheme" style="margin-left:0px;width:100px;">
 						<option value="light" <?php if($option_value['color_scheme']=="light") echo "selected='selected'";?>><?php _e('light', 'facebooklikebox');?></option>
 						<option value="dark" <?php if($option_value['color_scheme']=="dark") echo "selected='selected'";?>><?php _e('dark', 'facebooklikebox');?></option>
 					</select>
-					&nbsp;(<?php _e('Select the color scheme you want to display', 'facebooklikebox');?>)
-				</td>
+					&nbsp;<label id="cfbcolor_scheme"><b>?</b></label></td>
 			</tr>
+                        <tr id="color_scheme_help"><td></td><td>(<?php _e('Select the color scheme you want to display', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="150"><b><?php _e('Show Faces', 'facebooklikebox');?>:</b></td>
 				<td>
@@ -128,9 +136,10 @@ function cardoza_fb_like_options_page(){
 						<option value="true" <?php if($option_value['show_faces']=="true") echo "selected='selected'";?>><?php _e('Yes', 'facebooklikebox');?></option>
 						<option value="false" <?php if($option_value['show_faces']=="false") echo "selected='selected'";?>><?php _e('No', 'facebooklikebox');?></option>
 					</select>
-					&nbsp;(<?php _e('Select the option to show the faces', 'facebooklikebox');?>)
+					&nbsp;<label id="cfbshow_faces"><b>?</b></label>
 				</td>
 			</tr>
+                        <tr id="show_faces_help"><td></td><td>(<?php _e('Select the option to show the faces', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="150"><b><?php _e('Stream', 'facebooklikebox');?>:</b></td>
 				<td>
@@ -138,9 +147,10 @@ function cardoza_fb_like_options_page(){
 						<option value="true" <?php if($option_value['stream']=="true") echo "selected='selected'";?>><?php _e('Yes', 'facebooklikebox');?></option>
 						<option value="false" <?php if($option_value['stream']=="false") echo "selected='selected'";?>><?php _e('No', 'facebooklikebox');?></option>
 					</select>
-					&nbsp;(<?php _e('Select the option to display the stream', 'facebooklikebox');?>)
+					&nbsp;<label id="cfbstream"><b>?</b></label>
 				</td>
 			</tr>
+                        <tr id="stream_help"><td></td><td>(<?php _e('Select the option to display the stream', 'facebooklikebox');?>)</td></tr>
 			<tr height="35">
 				<td width="168"><b><?php _e('Header', 'facebooklikebox');?></b></td>
 				<td>
@@ -148,9 +158,10 @@ function cardoza_fb_like_options_page(){
 						<option value="true" <?php if($option_value['header']=="true") echo "selected='selected'";?>><?php _e('Yes', 'facebooklikebox');?></option>
 						<option value="false" <?php if($option_value['header']=="false") echo "selected='selected'";?>><?php _e('No', 'facebooklikebox');?></option>
 					</select>
-					&nbsp;(<?php _e('Select the option to display the title', 'facebooklikebox');?>)
+					&nbsp;<label id="cfbheader"><b>?</b></label>
 				</td>
 			</tr>
+                        <tr id="header_help"><td></td><td>(<?php _e('Select the option to display the title', 'facebooklikebox');?>)</td></tr>
 			<tr height="60"><td></td><td><input type="submit" name="frm_submit" value="<?php _e('Save', 'facebooklikebox');?>" style="background-color:#CCCCCC;font-weight:bold;"/></td>
 			</tr>
 		</table>

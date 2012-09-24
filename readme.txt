@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: http://www.fingerfish.com/
 Tags: facebook, like, likebox, fb, facebook like, like button, facebook like box, fb like box, button
 Requires at least: 3.0
-Tested up to: 3.3.2
+Tested up to: 3.4.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -74,6 +74,8 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+= Version 2.1 =
+* Help text modified as toggle text using jQuery.
 
 = Version 2.0 =
 * Hungarian translation updated.
