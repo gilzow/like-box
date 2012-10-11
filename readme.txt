@@ -1,6 +1,6 @@
 === Facebook Like Box ===
 Contributors: vinoj.cardoza
-Donate link: http://www.fingerfish.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: facebook, like, likebox, fb, facebook like, like button, facebook like box, fb like box, button
 Requires at least: 3.0
 Tested up to: 3.4.1
@@ -25,7 +25,7 @@ Note: Best plugin output width is 292px.
 
 = Donations =
 
-Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating. To donate visit my site http://www.fingerfish.com.
+Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating.
 
 If you have any suggestions or feedback, please post it in the following link.
 
