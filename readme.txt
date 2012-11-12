@@ -40,7 +40,7 @@ For more visit: http://fingerfish.com/cardoza-facebook-like-box/
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
 * Hungarian (Translated by Varanka Zoltan)
-* Spanish
+* Spanish (Translated by Oscar S. G. Saldarriaga)
 * Tamil
 
 == Installation ==
@@ -75,6 +75,9 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 2.3 =
+* Spanish translation improved. (Translated by Oscar S. G. Saldarriaga)
 
 = Version 2.2 = 
 * Tamil translation included.

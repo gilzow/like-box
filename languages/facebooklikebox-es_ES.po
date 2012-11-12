@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: facebooklikebox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-24 14:29-0000\n"
-"PO-Revision-Date: 2012-07-24 14:50-0000\n"
+"PO-Revision-Date: 2012-11-12 12:14-0000\n"
 "Last-Translator: Vinoj Cardoza <vinoj.cardoza@hotmail.com>\n"
 "Language-Team: Vinoj Cardoza <vinoj.cardoza@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -28,11 +28,11 @@ msgstr "Posts Like Box"
 #: ../cardoza_facebook_like_box.php:77
 #: ../cardoza_facebook_like_box.php:236
 msgid "Options saved."
-msgstr "Opciones de guardado."
+msgstr "Opciones guardadas."
 
 #: ../cardoza_facebook_like_box.php:83
 msgid "Facebook Like Box Options"
-msgstr "Al igual que Facebook Opciones del cuadro de"
+msgstr "Opciones de la caja \"me gusta\" de Facebook"
 
 #: ../cardoza_facebook_like_box.php:87
 msgid "General Settings"
@@ -44,7 +44,7 @@ msgstr "Título"
 
 #: ../cardoza_facebook_like_box.php:91
 msgid "Title of the facebook like box"
-msgstr "Título del facebook como la caja"
+msgstr "Título de la caja \"me gusta\" de Facebook"
 
 #: ../cardoza_facebook_like_box.php:94
 msgid "Facebook Page URL:"
@@ -52,7 +52,7 @@ msgstr "Facebook Page URL:"
 
 #: ../cardoza_facebook_like_box.php:96
 msgid "Copy and paste your facebook page URL here"
-msgstr "Copia y pega la URL de su página de Facebook aquí"
+msgstr "Copia y pega la URL de tu página de Facebook aquí"
 
 #: ../cardoza_facebook_like_box.php:99
 msgid "Border Color"
@@ -60,7 +60,7 @@ msgstr "Color del borde"
 
 #: ../cardoza_facebook_like_box.php:101
 msgid "Border Color of the facebook like box"
-msgstr "Color del borde del facebook como la caja"
+msgstr "Color del borde de la caja \"me gusta\" de Facebook"
 
 #: ../cardoza_facebook_like_box.php:104
 msgid "Width"
@@ -68,15 +68,15 @@ msgstr "Ancho"
 
 #: ../cardoza_facebook_like_box.php:106
 msgid "Width of the facebook like box"
-msgstr "Ancho de la caja de facebook como"
+msgstr "Ancho de la caja \"me gusta\" de Facebook"
 
 #: ../cardoza_facebook_like_box.php:109
 msgid "Height"
-msgstr "Altura"
+msgstr "Alto"
 
 #: ../cardoza_facebook_like_box.php:111
 msgid "Height of the facebook like box"
-msgstr "Altura del facebook como la caja"
+msgstr "Altura de la caja \"me gusta\" de Facebook"
 
 #: ../cardoza_facebook_like_box.php:114
 #: ../cardoza_facebook_like_box.php:294
@@ -86,7 +86,7 @@ msgstr "Combinación de colores"
 #: ../cardoza_facebook_like_box.php:117
 #: ../cardoza_facebook_like_box.php:297
 msgid "light"
-msgstr "luz"
+msgstr "claro"
 
 #: ../cardoza_facebook_like_box.php:118
 #: ../cardoza_facebook_like_box.php:298
@@ -96,12 +96,12 @@ msgstr "oscuro"
 #: ../cardoza_facebook_like_box.php:120
 #: ../cardoza_facebook_like_box.php:300
 msgid "Select the color scheme you want to display"
-msgstr "Seleccione el esquema de color que desea mostrar"
+msgstr "Selecciona el esquema de colores que deseas mostrar"
 
 #: ../cardoza_facebook_like_box.php:124
 #: ../cardoza_facebook_like_box.php:275
 msgid "Show Faces"
-msgstr "superficie de las caras"
+msgstr "Mostrar avatares"
 
 #: ../cardoza_facebook_like_box.php:127
 #: ../cardoza_facebook_like_box.php:137
@@ -122,52 +122,52 @@ msgstr "No"
 #: ../cardoza_facebook_like_box.php:130
 #: ../cardoza_facebook_like_box.php:281
 msgid "Select the option to show the faces"
-msgstr "Seleccione la opción para mostrar las caras"
+msgstr "Selecciona si deseas mostrar los avatares"
 
 #: ../cardoza_facebook_like_box.php:134
 msgid "Stream"
-msgstr "Corriente"
+msgstr "Flujo"
 
 #: ../cardoza_facebook_like_box.php:140
 msgid "Select the option to display the stream"
-msgstr "Seleccione la opción para mostrar el flujo de"
+msgstr "Selecciona si deseas mostrar el flujo de la página"
 
 #: ../cardoza_facebook_like_box.php:144
 msgid "Header"
-msgstr "Encabezamiento"
+msgstr "Cabecera"
 
 #: ../cardoza_facebook_like_box.php:150
 msgid "Select the option to display the title"
-msgstr "Seleccione la opción para mostrar el título"
+msgstr "Selecciona si deseas enseñar la cabecera"
 
 #: ../cardoza_facebook_like_box.php:153
 #: ../cardoza_facebook_like_box.php:303
 msgid "Save"
-msgstr "Ahorrar"
+msgstr "Guardar"
 
 #: ../cardoza_facebook_like_box.php:241
 msgid "Facebook Posts Like Options"
-msgstr "Facebook Mensajes como las opciones"
+msgstr "Opciones de la caja \"me gusta\" de Facebook para entradas"
 
 #: ../cardoza_facebook_like_box.php:246
 msgid "Show like button for posts"
-msgstr "Mostrar como botón de mensajes"
+msgstr "Mostrar el botón \"me gusta\" en las entradas"
 
 #: ../cardoza_facebook_like_box.php:255
 msgid "Show like button"
-msgstr "Mostrar como botón de"
+msgstr "Mostrar el botón \"me gusta\""
 
 #: ../cardoza_facebook_like_box.php:258
 msgid "Before the post content"
-msgstr "Antes de que el contenido de la entrada"
+msgstr "Antes del contenido de la entrada"
 
 #: ../cardoza_facebook_like_box.php:259
 msgid "After the post content"
-msgstr "Después de que el contenido de la entrada"
+msgstr "Después del contenido de la entrada"
 
 #: ../cardoza_facebook_like_box.php:260
 msgid "Before and after the post content"
-msgstr "Antes y después de que el contenido de la entrada"
+msgstr "Antes y después del contenido de la entrada"
 
 #: ../cardoza_facebook_like_box.php:265
 msgid "Layout"
@@ -175,11 +175,11 @@ msgstr "Disposición"
 
 #: ../cardoza_facebook_like_box.php:285
 msgid "Verb to display"
-msgstr "Verbos para mostrar"
+msgstr "Acción a mostrar"
 
 #: ../cardoza_facebook_like_box.php:288
 msgid "like"
-msgstr "como"
+msgstr "me gusta"
 
 #: ../cardoza_facebook_like_box.php:289
 msgid "recommend"
@@ -187,5 +187,5 @@ msgstr "recomendar"
 
 #: ../cardoza_facebook_like_box.php:350
 msgid "Facebook Like Box"
-msgstr "Facebook como la caja"
+msgstr "Caja \"me gusta\" de Facebook"
 
