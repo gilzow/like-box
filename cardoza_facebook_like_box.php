@@ -206,7 +206,7 @@ function cardoza_facebook_like_box_sc($atts){
     ?>
     <iframe 
     src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url'];?>&amp;
-    width=<?php echo $option_value['width'];?> &amp;
+    width=<?php echo $option_value['width'];?>&amp;
     height=<?php echo $option_value['height'];?>&amp;
     colorscheme=<?php echo $option_value['color_scheme'];?>&amp;
     show_faces=<?php echo $option_value['show_faces'];?>&amp;
