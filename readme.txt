@@ -32,7 +32,7 @@ If you have any suggestions or feedback, please post it in the following link.
 = Translation =
 Translation is enabled for this plugin. If someone interested in translating this plugin please visit the following link and post in the comments section with your contact email. Thanks.
 
-For more visit: http://fingerfish.com/cardoza-facebook-like-box/
+For more visit: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 = Translated languages =
 
@@ -72,7 +72,7 @@ How do I display the facebook posts like in the pages or posts?
 Just copy and paste the code below on the page or post you want to display the facebook posts like button.
 [cardoza_facebook_posts_like]
 
-if you have any queries post it at http://fingerfish.com/cardoza-facebook-like-box/
+if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 == Change Log ==
 
