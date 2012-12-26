@@ -40,8 +40,9 @@ For more visit: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 * French (Translated by Laurent Verpeet)
 * German (Translated by Peter Kaulfuss)
 * Hungarian (Translated by Varanka Zoltan)
+* Italian (Transalted by Claudio Chesselli)
 * Spanish (Translated by Oscar S. G. Saldarriaga)
-* Tamil
+* Tamil (Translated by Vinoj Cardoza)
 
 == Installation ==
 
@@ -75,6 +76,9 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 2.5 =
+* Italian transaltion added. (Transalted by Claudio Chesselli)
 
 = Version 2.4 =
 * Minor bug fixed.
