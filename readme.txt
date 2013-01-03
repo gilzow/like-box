@@ -77,6 +77,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-
 
 == Change Log ==
 
+= Version 2.6 =
+* Notices bug fixed for enqueuing the scripts and styles.
+
 = Version 2.5 =
 * Italian transaltion added. (Transalted by Claudio Chesselli)
 

@@ -3,24 +3,29 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 2.5
+Version: 2.6
 Author: Vinoj Cardoza
 Author URI: http://www.vinojcardoza.com/about-me/
 License: GPL2
 */
 
-wp_enqueue_style('cfblbcss', plugin_dir_url(__FILE__).'/cardozafacebook.css');
-wp_enqueue_script('cfblbjs', plugin_dir_url(__FILE__).'/cardozafacebook.js', array('jquery'));
+add_action('admin_init', 'cfblb_enq_scripts');
+add_action('wp_enqueue_scripts', 'cfblb_enq_scripts');
 
 add_action("plugins_loaded", "cardoza_fb_like_init");
 add_action("admin_menu", "cardoza_fb_like_options");
 add_shortcode("cardoza_facebook_like_box", "cardoza_facebook_like_box_sc");
 add_shortcode("cardoza_facebook_posts_like", "cardoza_facebook_posts_like_sc");
 
+function cfblb_enq_scripts(){
+	wp_enqueue_style('cfblbcss', plugins_url('/cardozafacebook.css', __FILE__));
+	wp_enqueue_script('cfblbjs', plugins_url('/cardozafacebook.js', __FILE__), array('jquery'));
+}
+
 //The following function will retrieve all the avaialable 
 //options from the wordpress database
 
-function cfblb_retrieve_options($opt_val){
+function cfblb_retrieve_options(){
 	$opt_val = array(
 			'title' => stripslashes(get_option('cfblb_title')),
 			'fb_url' => stripslashes(get_option('cfblb_fb_url')),
@@ -81,7 +86,7 @@ function cardoza_fb_like_options_page(){
 		<div id="message" class="updated fade"><p><strong><?php _e('Options saved.', 'facebooklikebox' ); ?></strong></p></div>
 <?php	
 	}
-	$option_value = cfblb_retrieve_options($opt_val);
+	$option_value = cfblb_retrieve_options();
 ?>
 	<div class="wrap">
 		<h2><?php echo __("Facebook Like Box Options", "facebooklikebox");?></h2><br />
@@ -171,7 +176,7 @@ function cardoza_fb_like_options_page(){
 }
 
 function widget_cardoza_fb_like($args){
-	$option_value = cfblb_retrieve_options($opt_val);
+	$option_value = cfblb_retrieve_options();
 	$option_value['fb_url'] = str_replace(":", "%3A", $option_value['fb_url']);
 	$option_value['fb_url'] = str_replace("/", "%2F", $option_value['fb_url']);
 	extract($args);
@@ -200,7 +205,7 @@ function widget_cardoza_fb_like($args){
 }
 function cardoza_facebook_like_box_sc($atts){
     ob_start();
-    $option_value = cfblb_retrieve_options($opt_val);
+    $option_value = cfblb_retrieve_options();
     $option_value['fb_url'] = str_replace(":", "%3A", $option_value['fb_url']);
     $option_value['fb_url'] = str_replace("/", "%2F", $option_value['fb_url']);
     ?>
@@ -375,6 +380,6 @@ function cardoza_facebook_posts_like_sc($content){
 
 function cardoza_fb_like_init(){
 	load_plugin_textdomain('facebooklikebox', false, dirname( plugin_basename(__FILE__)).'/languages');
-	register_sidebar_widget(__('Facebook Like Box'), 'widget_cardoza_fb_like');
+	wp_register_sidebar_widget('FBLBX', __('Facebook Like Box'), 'widget_cardoza_fb_like');
 }
 ?>
