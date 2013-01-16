@@ -3,7 +3,7 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 2.6
+Version: 2.7
 Author: Vinoj Cardoza
 Author URI: http://www.vinojcardoza.com/about-me/
 License: GPL2
@@ -180,6 +180,7 @@ function widget_cardoza_fb_like($args){
 	$option_value['fb_url'] = str_replace(":", "%3A", $option_value['fb_url']);
 	$option_value['fb_url'] = str_replace("/", "%2F", $option_value['fb_url']);
 	extract($args);
+        
 	echo $before_widget;
 	echo $before_title;
 	if(empty($option_value['title'])) $option_value['title'] = "Facebook Likes";
@@ -208,6 +209,9 @@ function cardoza_facebook_like_box_sc($atts){
     $option_value = cfblb_retrieve_options();
     $option_value['fb_url'] = str_replace(":", "%3A", $option_value['fb_url']);
     $option_value['fb_url'] = str_replace("/", "%2F", $option_value['fb_url']);
+    
+    if(isset($atts['width']) && !empty($atts['width'])) $option_value['width'] = $atts['width'];
+    if(isset($atts['height']) && !empty($atts['height'])) $option_value['height'] = $atts['height'];
     ?>
     <iframe 
     src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url'];?>&amp;

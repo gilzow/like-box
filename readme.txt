@@ -69,6 +69,12 @@ How do I display the facebook like box in the pages or posts?
 Just copy and paste the code below on the page or post you want to display the facebook like box.
 [cardoza_facebook_like_box]
 
+How do I specify different width and height for facebook like box in the pages or posts?
+For example if you want to specify the dimensions of width 600px and height 200px for facebook like box in the pages or posts, you have to include the short code in the following format.
+[cardoza_facebook_like_box width="600" height="200"]
+Note: If you dont specify width and height, by default it will take dimensions from the facebook options you specified.
+Note: Don't include any px or pt with the dimesnion values you are specifying.
+
 How do I display the facebook posts like in the pages or posts?
 Just copy and paste the code below on the page or post you want to display the facebook posts like button.
 [cardoza_facebook_posts_like]
@@ -76,6 +82,9 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 2.7 =
+* Custom width and height option enabled in short codes for facebook like box (Requested and Suggested by Joe Zeng).
 
 = Version 2.6 =
 * Notices bug fixed for enqueuing the scripts and styles.
