@@ -3,7 +3,7 @@
 Plugin Name: Facebook Like Box
 Plugin URI: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 Description: Facebook Like Box enables you to display the facebook page likes in your website.
-Version: 2.7
+Version: 2.8
 Author: Vinoj Cardoza
 Author URI: http://www.vinojcardoza.com/about-me/
 License: GPL2
@@ -188,17 +188,8 @@ function widget_cardoza_fb_like($args){
 	echo $after_title;
 	?>
 	<iframe 
-	src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url'];?>&amp;
-	width=<?php echo $option_value['width'];?>&amp;
-	height=<?php echo $option_value['height'];?>&amp;
-	colorscheme=<?php echo $option_value['color_scheme'];?>&amp;
-	show_faces=<?php echo $option_value['show_faces'];?>&amp;
-	stream=<?php echo $option_value['stream'];?>&amp;
-	header=<?php echo $option_value['header'];?>&amp;
-	border_color=%23<?php echo $option_value['fb_border_color'];?>"
-	scrolling="no" 
-	frameborder="0" 
-	style="border:none; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
+	src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url'];?>&amp;width=<?php echo $option_value['width'];?>&amp;height=<?php echo $option_value['height'];?>&amp;colorscheme=<?php echo $option_value['color_scheme'];?>&amp;show_faces=<?php echo $option_value['show_faces'];?>&amp;stream=<?php echo $option_value['stream'];?>&amp;header=<?php echo $option_value['header'];?>&amp;border_color=%23<?php echo $option_value['fb_border_color'];?>" 
+        scrolling="no" frameborder="0" style="border:1px solid #<?php echo $option_value['fb_border_color'];?>; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
 	</iframe>
 <?php
 	global $wpdb;
@@ -224,7 +215,7 @@ function cardoza_facebook_like_box_sc($atts){
     border_color=%23<?php echo $option_value['fb_border_color'];?>"
     scrolling="no" 
     frameborder="0" 
-    style="border:none; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
+    style="border:1px solid #<?php echo $option_value['fb_border_color'];?>; overflow:hidden; width:<?php echo $option_value['width'];?>px; height:<?php echo $option_value['height'];?>px;" allowTransparency="true">
     </iframe>
 <?php
     $output_string = ob_get_contents();

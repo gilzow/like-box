@@ -83,6 +83,9 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-
 
 == Change Log ==
 
+= Version 2.8 =
+* Border colour issue was sorted out.
+
 = Version 2.7 =
 * Custom width and height option enabled in short codes for facebook like box (Requested and Suggested by Joe Zeng).
 
@@ -90,7 +93,7 @@ if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-
 * Notices bug fixed for enqueuing the scripts and styles.
 
 = Version 2.5 =
-* Italian transaltion added. (Transalted by Claudio Chesselli)
+* Italian translation added. (Translated by Claudio Chesselli)
 
 = Version 2.4 =
 * Minor bug fixed.
@@ -128,7 +131,7 @@ Like box for posts added to the plugin.
 Cardoza Facebook Like Box replaced as Facebook Like Box.
 
 = Version 1.3 =
-Border color input enabled for the facebook like box. Now the users can specify the border color of the like box.
+Border colour input enabled for the facebook like box. Now the users can specify the border colour of the like box.
 
 = Version 1.2 =
 Shortcode updated to display on the specific place according to the post or page.
