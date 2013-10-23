@@ -23,16 +23,16 @@ Facebook Like Box is a social plugin that enables Facebook Page owners to attrac
 
 Note: Best plugin output width is 292px.
 
-= Donations =
+= Support =
 
-Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating.
+Thanks for downloading and installing my plugin. You can show your appreciation and support future development by donating or clicking the ads on the blog page.
+
+Support Page: http://www.vinojcardoza.com/blog/cardoza-facebook-like-box/
 
 If you have any suggestions or feedback, please post it in the following link.
 
 = Translation =
 Translation is enabled for this plugin. If someone interested in translating this plugin please visit the following link and post in the comments section with your contact email. Thanks.
-
-For more visit: http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 = Translated languages =
 
