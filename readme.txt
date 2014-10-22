@@ -3,7 +3,7 @@ Contributors: vinoj.cardoza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=vinoj%2ecardoza%40gmail%2ecom&currency_code=GBP&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: facebook, like, likebox, fb, facebook like, like button, facebook like box, fb like box, button
 Requires at least: 3.0
-Tested up to: 3.6.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -82,6 +82,9 @@ Just copy and paste the code below on the page or post you want to display the f
 if you have any queries post it at http://www.vinojcardoza.com/cardoza-facebook-like-box/
 
 == Change Log ==
+
+= Version 2.8.2 =
+* Tested with Wordpress Version 4.0
 
 = Version 2.8.1 =
 * Support URL updated.
