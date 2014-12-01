@@ -27,16 +27,16 @@ function cfblb_enq_scripts() {
 
 function cfblb_retrieve_options() {
     $opt_val = array(
-        'title' => stripslashes(get_option('cfblb_title')),
-        'fb_url' => stripslashes(get_option('cfblb_fb_url')),
-        'fb_border_color' => stripslashes(get_option('cfblb_fb_border_color')),
-        'fb_color' => stripslashes(get_option('cfblb_fb_border_color')),
-        'width' => stripslashes(get_option('cfblb_width')),
-        'height' => stripslashes(get_option('cfblb_height')),
-        'color_scheme' => stripslashes(get_option('cfblb_color_scheme')),
-        'show_faces' => stripslashes(get_option('cfblb_show_faces')),
-        'stream' => stripslashes(get_option('cfblb_stream')),
-        'header' => stripslashes(get_option('cfblb_header')),
+        'title' => esc_html(get_option('cfblb_title')),
+        'fb_url' => esc_html(get_option('cfblb_fb_url')),
+        'fb_border_color' => esc_html(get_option('cfblb_fb_border_color')),
+        'fb_color' => esc_html(get_option('cfblb_fb_border_color')),
+        'width' => esc_html(get_option('cfblb_width')),
+        'height' => esc_html(get_option('cfblb_height')),
+        'color_scheme' => esc_html(get_option('cfblb_color_scheme')),
+        'show_faces' => esc_html(get_option('cfblb_show_faces')),
+        'stream' => esc_html(get_option('cfblb_stream')),
+        'header' => esc_html(get_option('cfblb_header')),
     );
     return $opt_val;
 }
@@ -64,39 +64,39 @@ function cardoza_fb_like_options_page() {
 
     if (isset($_POST['frm_submit'])) {
         if (!empty($_POST['frm_title'])){
-            $_POST['frm_title'] = inputSanitize($_POST['frm_title']);
+            $_POST['frm_title'] = sanitize_text_field($_POST['frm_title']);
             update_option($cfblb_options['cfb_title'], $_POST['frm_title']);
         }
         if (!empty($_POST['frm_url'])){
-            $_POST['frm_url'] = inputSanitize($_POST['frm_url']);
+            $_POST['frm_url'] = sanitize_text_field($_POST['frm_url']);
             update_option($cfblb_options['cfb_fb_url'], $_POST['frm_url']);
         }
         if (!empty($_POST['frm_border_color'])){
-            $_POST['frm_border_color'] = inputSanitize($_POST['frm_border_color']);
+            $_POST['frm_border_color'] = sanitize_text_field($_POST['frm_border_color']);
             update_option($cfblb_options['cfb_fb_border_color'], $_POST['frm_border_color']);
         }
         if (!empty($_POST['frm_width'])){
-            $_POST['frm_width'] = inputSanitize($_POST['frm_width']);
+            $_POST['frm_width'] = sanitize_text_field($_POST['frm_width']);
             update_option($cfblb_options['cfb_width'], $_POST['frm_width']);
         }
         if (!empty($_POST['frm_height'])){
-            $_POST['frm_height'] = inputSanitize($_POST['frm_height']);
+            $_POST['frm_height'] = sanitize_text_field($_POST['frm_height']);
             update_option($cfblb_options['cfb_height'], $_POST['frm_height']);
         }
         if (!empty($_POST['frm_color_scheme'])){
-            $_POST['frm_color_scheme'] = inputSanitize($_POST['frm_color_scheme']);
+            $_POST['frm_color_scheme'] = sanitize_text_field($_POST['frm_color_scheme']);
             update_option($cfblb_options['cfb_color_scheme'], $_POST['frm_color_scheme']);
         }
         if (!empty($_POST['frm_show_faces'])){
-            $_POST['frm_show_faces'] = inputSanitize($_POST['frm_show_faces']);
+            $_POST['frm_show_faces'] = sanitize_text_field($_POST['frm_show_faces']);
             update_option($cfblb_options['cfb_show_faces'], $_POST['frm_show_faces']);
         }
         if (!empty($_POST['frm_stream'])){
-            $_POST['frm_stream'] = inputSanitize($_POST['frm_stream']);
+            $_POST['frm_stream'] = sanitize_text_field($_POST['frm_stream']);
             update_option($cfblb_options['cfb_stream'], $_POST['frm_stream']);
         }
         if (!empty($_POST['frm_header'])){
-            $_POST['frm_header'] = inputSanitize($_POST['frm_header']);
+            $_POST['frm_header'] = sanitize_text_field($_POST['frm_header']);
             update_option($cfblb_options['cfb_header'], $_POST['frm_header']);
         }
         ?>
@@ -206,8 +206,7 @@ function widget_cardoza_fb_like($args) {
     echo $after_title;
     ?>
     <iframe 
-        src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url']; ?>&amp;width=<?php echo $option_value['width']; ?>&amp;height=<?php echo $option_value['height']; ?>&amp;colorscheme=<?php echo $option_value['color_scheme']; ?>&amp;show_faces=<?php echo $option_value['show_faces']; ?>&amp;stream=<?php echo $option_value['stream']; ?>&amp;header=<?php echo $option_value['header']; ?>&amp;border_color=%23<?php echo $option_value['fb_border_color']; ?>" 
-        scrolling="no" frameborder="0" style="border:1px solid #<?php echo $option_value['fb_border_color']; ?>; overflow:hidden; width:<?php echo $option_value['width']; ?>px; height:<?php echo $option_value['height']; ?>px;" allowTransparency="true">
+        src="//www.facebook.com/plugins/likebox.php?href=<?php echo $option_value['fb_url']; ?>&amp;width=<?php echo $option_value['width']; ?>&amp;height=<?php echo $option_value['height']; ?>&amp;colorscheme=<?php echo $option_value['color_scheme']; ?>&amp;show_faces=<?php echo $option_value['show_faces']; ?>&amp;stream=<?php echo $option_value['stream']; ?>&amp;header=<?php echo $option_value['header']; ?>&amp;border_color=%23<?php echo $option_value['fb_border_color']; ?>" scrolling="no" frameborder="0" style="border:1px solid #<?php echo $option_value['fb_border_color']; ?>; overflow:hidden; width:<?php echo $option_value['width']; ?>px; height:<?php echo $option_value['height']; ?>px;" allowTransparency="true">
     </iframe>
     <?php
     global $wpdb;
@@ -254,27 +253,27 @@ function posts_like_options() {
 
     if (isset($_POST['frm_submit'])) {
         if ($_POST['cfpl_enable']){
-            $_POST['cfpl_enable'] = inputSanitize($_POST['cfpl_enable']);
+            $_POST['cfpl_enable'] = sanitize_text_field($_POST['cfpl_enable']);
             update_option('cfpl_enable', $_POST['cfpl_enable']);
         }
         if ($_POST['show_button']){
-            $_POST['show_button'] = inputSanitize($_POST['show_button']);
+            $_POST['show_button'] = sanitize_text_field($_POST['show_button']);
             update_option('cfpl_show_button', $_POST['show_button']);
         }
         if ($_POST['layout']){
-            $_POST['layout'] = inputSanitize($_POST['layout']);
+            $_POST['layout'] = sanitize_text_field($_POST['layout']);
             update_option('cfpl_layout', $_POST['layout']);
         }
         if ($_POST['show_faces']){
-            $_POST['show_faces'] = inputSanitize($_POST['show_faces']);
+            $_POST['show_faces'] = sanitize_text_field($_POST['show_faces']);
             update_option('cfpl_show_faces', $_POST['show_faces']);
         }
         if ($_POST['verb']){
-            $_POST['verb'] = inputSanitize($_POST['verb']);
+            $_POST['verb'] = sanitize_text_field($_POST['verb']);
             update_option('cfpl_verb', $_POST['verb']);
         }
         if ($_POST['color_scheme']){
-            $_POST['color_scheme'] = inputSanitize($_POST['color_scheme']);
+            $_POST['color_scheme'] = sanitize_text_field($_POST['color_scheme']);
             update_option('cfpl_color_scheme', $_POST['color_scheme']);
         }
         $cfpl_enable = get_option('cfpl_enable');
@@ -416,11 +415,5 @@ function cardoza_facebook_posts_like_sc($content) {
 function cardoza_fb_like_init() {
     load_plugin_textdomain('facebooklikebox', false, dirname(plugin_basename(__FILE__)) . '/languages');
     wp_register_sidebar_widget('FBLBX', __('Facebook Like Box'), 'widget_cardoza_fb_like');
-}
-
-function inputSanitize($string){
-    $string = esc_sql($string);
-    $string = strip_tags($string);
-    return $string;
 }
 ?>
