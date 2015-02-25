@@ -3,7 +3,7 @@
   Plugin Name: Facebook Like Box
   Plugin URI: http://www.vinojcardoza.com/blog/cardoza-facebook-like-box/
   Description: Facebook Like Box enables you to display the facebook page likes in your website.
-  Version: 2.8.3
+  Version: 2.8.4
   Author: Vinoj Cardoza
   Author URI: http://www.vinojcardoza.com
   License: GPL2
